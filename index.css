@@ -9,97 +9,176 @@
 }
 
 body {
-    background-color: darkslategrey;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+/* Header Section */
+header {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+  background-color: #2196f3;
+  color: white;
+  border-bottom: 4px solid #1976d2;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 header h1 {
-    font-weight: bold;
-    font-size: 3rem;
-    color: rgb(22, 21, 21);
-    font-style: italic;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-#search-add{
-    display: flex;
-    justify-content: space-between;
-    font-size: 2rem;
-    margin: 1rem;
-    padding: 0.5rem;
-    
+#calendar {
+  margin-bottom: 10px;
 }
 
-#search-box{
-    border: none;
-    padding: 0.5rem;
-    width: 25rem;
-    border-radius: 0.5rem;
-    background-color: rgb(133, 151, 147);
-    
+#search-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
 
-#todo-container {
-    display: grid;
-    font-size: 2rem;
-    
+#search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
 }
 
+#search-box {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+}
+
+#search-icon {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+#add {
+  margin-left: 15px;
+}
+
+#add-icon {
+  font-size: 2rem;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-icon:hover {
+  background-color: #43a047;
+}
+
+/* Main Section */
+main {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Add New Task */
 #new-task {
-    display: grid;
-    grid-template-rows: 3fr 1fr 1fr;
-    grid-template-columns: 60% 35% 5%;
-    justify-content: center;
-    
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f1f8e9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
 }
 
-#add-task {
-    width: 80%;
-
-    height: 8vh;
-    font-size: 1rem;
-    background-color: rgb(63, 99, 100);
-    border-radius: 0.5rem;
-    margin-top: 1.5rem;
-    
-
+#add-task,
+#new-task-due-date {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
 }
 
-#new-task-due-date{
-    width: 80%;
-    height: 8vh;
-    font-size: 1rem;
-    background-color: rgb(63, 99, 100);
-    border-radius: 0.5rem;
-    margin-top: 1.5rem;
+#addNewTask-icon {
+  font-size: 1.8rem;
+  color: #ffffff;
+  background-color: #03a9f4;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
-.tasks{
-    margin: 10px;
-    display: grid;
-    grid-template-columns:60% 40%;
-    grid-auto-rows: auto ;
-    font-family: 'Times New Roman', Times, serif;
-    box-shadow: 0 0 4px;
-    gap: 5px;
-
-    
-    
+#addNewTask-icon:hover {
+  background-color: #0288d1;
 }
 
-.task-detail{ 
-    overflow-wrap: break-word;
-    word-break: break-word;
-    padding: 10px;  
-
+/* Tasks Section */
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.due-date {
-    padding: 10px;
-
-    
+.task-detail {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-left: 6px solid #2196f3;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
-.delete-btn{
-    font-size: 1.5rem;
-    color: rgb(85, 52, 52);
+
+.task-detail p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
 }
 
+.due-date p {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #888;
+}
