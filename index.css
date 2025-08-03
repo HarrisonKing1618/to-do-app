@@ -1,0 +1,105 @@
+*,
+*::before
+*::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: darkslategrey;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgb(22, 21, 21);
+    font-style: italic;
+}
+
+#search-add{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    
+}
+
+#search-box{
+    border: none;
+    padding: 0.5rem;
+    width: 25rem;
+    border-radius: 0.5rem;
+    background-color: rgb(133, 151, 147);
+    
+}
+
+#todo-container {
+    display: grid;
+    font-size: 2rem;
+    
+}
+
+#new-task {
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-columns: 60% 35% 5%;
+    justify-content: center;
+    
+}
+
+#add-task {
+    width: 80%;
+
+    height: 8vh;
+    font-size: 1rem;
+    background-color: rgb(63, 99, 100);
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    
+
+}
+
+#new-task-due-date{
+    width: 80%;
+    height: 8vh;
+    font-size: 1rem;
+    background-color: rgb(63, 99, 100);
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.tasks{
+    margin: 10px;
+    display: grid;
+    grid-template-columns:60% 40%;
+    grid-auto-rows: auto ;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 4px;
+    gap: 5px;
+
+    
+    
+}
+
+.task-detail{ 
+    overflow-wrap: break-word;
+    word-break: break-word;
+    padding: 10px;  
+
+}
+
+.due-date {
+    padding: 10px;
+
+    
+}
+.delete-btn{
+    font-size: 1.5rem;
+    color: rgb(85, 52, 52);
+}
+
